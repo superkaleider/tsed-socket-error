@@ -18,8 +18,16 @@ import { config, rootDir } from "./config";
   httpPort: process.env.PORT || 8083,
   httpsPort: false, // CHANGE
   mount: {
-    "/rest": [
+    "/v1": [
       `${rootDir}/controllers/**/*.ts`
+    ]
+  },
+  statics: {
+    "/": [
+      {
+        root: `${rootDir}/public`,
+        // ... statics options
+      }
     ]
   },
   exclude: [
