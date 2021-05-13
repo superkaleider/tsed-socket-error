@@ -12,7 +12,7 @@ import { config, rootDir } from "./config";
 @Configuration({
   ...config,
   socketIO: {
-    path: '/'
+    path: '/socket'
   },
   acceptMimes: ["application/json"],
   httpPort: process.env.PORT || 8083,
