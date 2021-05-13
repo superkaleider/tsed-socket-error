@@ -14,9 +14,9 @@ export class MySocketService {
    */
   $onNamespaceInit(nsp: SocketIO.Namespace) {
     console.log('socket init');
-    
+
   }
-  
+
   /**
    * Triggered when a new client connects to the Namespace.
    */
@@ -30,5 +30,9 @@ export class MySocketService {
    */
   $onDisconnect(@Socket socket: SocketIO.Socket) {
 
+  }
+
+  send() {
+    this.nsp.emit("TEST");
   }
 }
